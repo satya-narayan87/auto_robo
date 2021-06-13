@@ -7,11 +7,11 @@ from selenium import webdriver
 
 
 option = Options()
-#option.add_experimental_option("debuggerAddress" , "localhost:9015")
+option.add_experimental_option("debuggerAddress" , "localhost:9015")
 driver = webdriver.Chrome("drivers/chromedriver" , options= option)
 
-driver.get("https://www.unternehmensverzeichnis.org")
-click(driver , locator_value="cookieModalAccept" , locator_name="" , id = True)
+# driver.get("https://www.unternehmensverzeichnis.org")
+# click(driver , locator_value="cookieModalAccept" , locator_name="" , id = True)
 
 click(driver , locator_value="Registration_Legal" , locator_name="Terms and Cond Check box" , id = True)
 

@@ -13,3 +13,5 @@ Automation Frame-work.
 ### Installation
 
 ### Testing
+
+pytest -W ignore::pytest.PytestUnknownMarkWarning -m others -v

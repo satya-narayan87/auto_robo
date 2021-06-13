@@ -1,0 +1,8 @@
+{
+    "TestBooking" : {
+        "name" : "http://blazedemo.com",
+        "search_item" : "Hye!How are you",
+        "report" : true,
+        "email_trigger" : true
+    }
+}
