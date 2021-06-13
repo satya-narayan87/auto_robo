@@ -19,6 +19,6 @@ def driver_init(request):
     web_driver = webdriver.Chrome("drivers/chromedriver")
     request.cls.driver = web_driver
     yield
-    web_driver.close()
+    #web_driver.close()
 
 

@@ -4,5 +4,11 @@
         "search_item" : "Hye!How are you",
         "report" : true,
         "email_trigger" : true
+    },
+    "marktplatz" : {
+        "name" : "https://www.marktplatz-mittelstand.de/Firmeneintrag",
+        "first_name_data" : "Baap",
+        "report" : true,
+        "email_trigger" : true
     }
 }
