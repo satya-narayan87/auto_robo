@@ -11,12 +11,12 @@ import glob
 import time
 import re
 import pytest
-import json
 from pathlib import Path
 import inspect
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from utils.data_utils import DataUtils
 
 
 
@@ -32,27 +32,26 @@ class BaseTest:
     """
 
 
-    def test_site_map(self,site_name):
-
-        ##This will return data of websitedatetime A combination of a date and a time. Attributes: ()
-        
-        f = open('tests/conf_data/site_conf.json')
-
-        self.site_data = json.load(f)
-        return self.site_data[site_name]
-
-
     def lunch_site(self):
         frame = inspect.stack()[1]
         module = inspect.getmodule(frame[0])
         filename = module.__file__
-        base = os.path.basename(filename).replace(".py","").split("test_")[1]
-        print(base)
+        site_name = os.path.basename(filename).replace(".py","").split("test_")[1]
+        print(site_name)
 
         #Collect data with map
-        data = self.test_site_map(base)
-        print(data["name"])
-        self.driver.get(data["name"])
+        self.site_data = DataUtils.site_map_data(self,site_name)
+        print(self.site_data["name"])
+        self.driver.get(self.site_data["name"])
+
+    def accept_cookies(self):
+        frame = inspect.stack()[1]
+        module = inspect.getmodule(frame[0])
+        filename = module.__file__
+        site_name = os.path.basename(filename).replace(".py","").split("test_")[1]
+
+        self.navigator_data = DataUtils.data_navigator(self,site_name)
+        self.driver.find_element_by_xpath(self.navigator_data["cookies"]).click()
 
 
 
