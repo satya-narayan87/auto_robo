@@ -18,5 +18,9 @@
         "password" : "I don't know",
         "repeat_password" : "Yes, I don't know",
         "place_name" : "pan India"
+    },
+    "google" : {
+        "name" : "https://google.com",
+        "search" : "Hye! byte here"
     }
 }

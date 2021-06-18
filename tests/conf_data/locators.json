@@ -12,5 +12,9 @@
         "password" : "//*[@id='newUser_password']",
         "repeat_password" : "//*[@id='newUser_confirmPassword']",
         "place_name" : "//*[@id='txtLocalityFilter']"
+    },
+    "google" : {
+        "gamail": "",
+        "search" : "/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input"
     }
 }

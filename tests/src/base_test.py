@@ -45,6 +45,7 @@ class BaseTest:
         filename = module.__file__
         site_name = os.path.basename(filename).replace(".py","").split("test_")[1]
         print(site_name)
+        
         sleep(2)
         #Collect data with map
         self.site_data = DataUtils.site_map_data(self,site_name)
