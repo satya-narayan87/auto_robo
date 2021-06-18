@@ -1,6 +1,7 @@
 from selenium import webdriver
 import pytest
 
+
 # creds
 API_KEY = ''
 API_SECRET = ''
@@ -20,5 +21,9 @@ def driver_init(request):
     request.cls.driver = web_driver
     yield
     web_driver.close()
+
+
+
+
 
 
